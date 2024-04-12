@@ -1,0 +1,424 @@
+
+.display-xl {
+  font-size: 10vw;
+  font-weight: 15rem;
+  letter-spacing: -0.05em;
+}
+
+
+
+
+
+
+
+.bg-text {
+  position: relative;
+}
+.bg-text:after {
+  content: attr(data-text);
+  position: absolute;
+  right: -15%;
+  bottom: 100px;
+  font-weight: 300;
+  font-size: 29rem;
+  line-height: 85%;
+  letter-spacing: -0.1em;
+  color: #F1F1F1;
+  z-index: -1;
+}
+@media only screen and (max-width: 768px) {
+  .bg-text:after {
+    right: 0;
+  }
+}
+
+.icon-box p {
+  text-align: left;
+  font-size: large;
+}
+
+.svg-icon {
+  width: 42px; /* Or any size you prefer */
+  height: auto;
+  margin-right: 8px; /* Space between the icon and the text */
+}
+
+.skill-list {
+  font-size: 18px; /* Adjust the font size as needed */
+  line-height: 1.5; /* Optional: Adjust the line height for better readability */
+}
+
+.data-info ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+  gap: 20px; /* Adjusts the gap between grid items */
+  max-width: 400px; /* Adjust based on your design */
+}
+
+.data-info ul li {
+  display: flex;
+  align-items: center;
+}
+
+.data-info ul li i {
+  font-size: 32px;
+  margin-right: 10px; /* Adds space between the icon and text */
+}
+
+
+
+
+
+
+.bouncing-blob {
+  width: 32vw;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  will-change: transform;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transform-origin: left top;
+}
+
+.bouncing-blob--blue {
+  background: #4783c7;
+}
+
+.bouncing-blob--white {
+  background: #ffffff;
+  z-index: 2;
+  width: 15vw;
+}
+
+.bouncing-blob--purple {
+  background: #8c8ff1;
+}
+
+.bouncing-blob--pink {
+  background: #e289cd50;
+}
+
+.bouncing-blobs-container {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.bouncing-blobs-glass {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(140px);
+  -webkit-backdrop-filter: blur(140px);
+  pointer-events: none;
+}
+
+.bouncing-blobs {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1200px) {
+  .bouncing-blobs-glass {
+    backdrop-filter: blur(120px);
+    -webkit-backdrop-filter: blur(120px);
+  }
+}
+
+@media (max-width: 500px) {
+  .bouncing-blob {
+    width: 60vw;
+  }
+  .bouncing-blob--white {
+    width: 30vw;
+  }
+  .bouncing-blobs-glass {
+    backdrop-filter: blur(90px);
+    -webkit-backdrop-filter: blur(90px);
+  }
+}
+
+
+.banner-image img {
+  margin-bottom: 20px;
+  height: 500px;
+}
+
+@media (max-width: 1100px) {
+  .banner-image img {
+    height: 300px;
+    width: auto;
+    margin-left: 150px /* Limit the width to 100% of its container */
+  }
+}
+
+@media (max-width: 1100px) {
+  .project-frame {
+    width: 100%;
+    margin-bottom: 20px; /* Add some space between stacked projects */
+  }
+}
+
+/* Add responsive text sizes for screens smaller than 768px */
+@media (max-width: 1100px) {
+  body {
+    font-size: 22px; /* Slightly larger base size */
+  }
+
+  h1 {
+    font-size: 5rem; /* Larger heading size */
+  }
+
+  p {
+    font-size: 1rem; /* Larger paragraph size */
+  }
+
+  /* Adjust sizes for other elements as needed */
+  .sub-heading, .info-title, .card-title {
+    font-size: 3rem; /* Example for sub-headings and titles */
+  }
+
+  .navbar ul li a {
+    font-size: 3rem; /* Larger navigation links */
+  }
+}
+
+.navbar {
+  height: 60px;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding-left: 1em;
+  padding-right: 1em;
+  box-sizing: border-box;
+  display: block;
+  border-radius: 500px;
+  position: relative;
+  background-color: #ffffff00;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  position: relative;
+  z-index: 5;
+}
+
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 1em;
+}
+
+.navbar ul li {
+  display: inline;
+  text-decoration: none;
+}
+
+.navbar ul li a {
+  padding: 0.25em 1em;
+  color: #090909;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+  position: relative; /* Required for positioning the pseudo-element */
+  display: inline-block; /* Allows the pseudo-element to span the full width */
+  transition: color 400ms cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth color transition */
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+  color: #2600ff; /* Change text color on hover/focus */
+}
+
+.navbar ul li a::after {
+  content: "";
+  display: block;
+  margin-top: 5px; /* Adjust spacing between the link text and the underline */
+  height: 2px;
+  width: 0;
+  background: #2600ff; /* Underline color */
+  transition: width 800ms cubic-bezier(0.25, 0.8, 0.25, 1), left 800ms cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Start the transition from the center */
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li a:focus::after {
+  width: 100%; /* Extend the underline across the full width on hover/focus */
+  left: 0; /* Align the underline with the left edge of the link text */
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.project-frame {
+  position: relative;
+  width: 100%; /* Adjust to fit the column width */
+  overflow: hidden;
+}
+
+.project-tall {
+  margin-top: 25px;
+  width: 90%; /* Adjust based on content, or use a specific height */
+}
+
+.project-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.7); /* Semi-transparent overlay */
+  color: white;
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.project-frame:hover .project-info {
+  transform: translateY(0);
+}
+
+.project-link {
+  display: block;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+
+
+/* Retain previous accordion styles and add card styling for the contact form */
+.card {
+  background: #fff; /* Optional: Adjust based on your design preference */
+}
+
+.card-title {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#form button[type="submit"] {
+  background-color: #333; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove any default border */
+}
+
+#form button[type="submit"]:hover {
+  background-color: #444; /* Slightly darker shade on hover */
+  color: #fff; /* Ensuring text color remains white */
+}
+
+.accordion-button:not(.collapsed), .accordion-button {
+  color: #333;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.accordion-item {
+  background-color: transparent;
+  border: none;
+}
+
+.accordion-button{
+  color: #000000; /* Adjust as needed for readability */
+}
+
+.accordion-body {
+  color: #333; /* Adjust as needed for readability */
+  font-weight: bold;
+  font-size: 18px;
+  text-align: justify;
+}
+
+
+footer {
+  background: #333; /* Dark background for the footer */
+  color: #fff; /* White text color */
+  padding: 20px 0; /* Padding for top and bottom */
+}
+
+footer a {
+  color: #f8f9fa; /* Lighter text color for links */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+#backToTopButton {
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
+  left: 30px; 
+  z-index: 99; 
+  border: none; 
+  outline: none;
+  background-color: #333; 
+  color: white; 
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 10px; 
+  font-size: 18px; 
+}
+
+#backToTopButton:hover {
+  background-color: #555; 
+}
+
+
+
+
+.project-details {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.project-title {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.project-image {
+  max-height: 400px;
+  display: block;
+  margin: 20px auto;
+}
+
+.technologies-used {
+  list-style-type: square;
+  margin: 20px 0;
+  padding-left: 40px;
+}
+
+.challenge-description {
+  text-align: justify;
+}
+
