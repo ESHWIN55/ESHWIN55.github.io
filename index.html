@@ -26,9 +26,11 @@
   gtag('config', 'G-VRWZGVYN0P');
 </script>
 <body class="bg-body homepage post-template" data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
+
   <div class="bouncing-blobs-container">
     <div class="bouncing-blobs-glass"></div>
     <div class="bouncing-blobs">
+      <!-- Individual bouncing blobs with unique color classes for styling -->
       <div class="bouncing-blob bouncing-blob--blue"></div>
       <div class="bouncing-blob bouncing-blob--blue"></div>
       <div class="bouncing-blob bouncing-blob--blue"></div>
@@ -39,12 +41,12 @@
     </div>
   </div>
 
-  <nav class="navbar">
+  <nav class="navbar" role="navigation">
     <ul>
-      <li><a href="#home" title="Home">Home</a></li>
-      <li><a href="#about" title="Experiences">Experiences</a></li>
-      <li><a href="#portfolio" title="Projects">Projects</a></li>
-      <li><a href="#contact" title="Contact">Contact</a></li>
+      <li><a href="#home" title="Eshwin Singh's Portfolio Home">Home</a></li>
+      <li><a href="#about" title="Eshwin Singh's Professional Background and Skills">Professional Background</a></li>
+      <li><a href="#portfolio" title="Eshwin Singh's Projects in Computer Vision, Game Development, and Graphic Design">Tech and Design Projects</a></li>
+      <li><a href="#contact" title="Contact Eshwin Singh for Collaborations and Opportunities">Get in Touch</a></li>      
     </ul>
   </nav>
 
@@ -93,7 +95,7 @@
               <div class="row d-flex flex-wrap" data-aos="fade-up">
                 <div class="col-lg-6 pb-5">
                   <span class="text-muted text-uppercase">BIODATA</span>
-                  <h2 class="display-4 txt-fx slide-up">Education</h2>
+                  <h2 class="display-4 txt-fx slide-up" style="font-weight: bolder;">Education</h2>
                   <div class="data-info py-3" data-aos="fade-up">
                     <span class="meta-date">2021 - Present (2024)</span>
                     <h3 class="info-title">BSc.(Hons) IN MULTIMEDIA COMPUTING</h3>
@@ -107,7 +109,7 @@
                   </div>
                 </div>
                 <div class="col-lg-6 pb-5">
-                  <h2 class="display-4 txt-fx slide-up">Skills</h2>
+                  <h2 class="display-4 txt-fx slide-up" style="font-weight: bolder;">Skills</h2>
                   
                   <!-- Programming Languages & Frameworks -->
                   <div class="data-info py-3" data-aos="fade-up">
@@ -142,7 +144,7 @@
           <section id="portfolio" class="my-5 py-5 bg-text" data-text="03">
             <div class="container">
               <div class="section-header text-center my-5" data-aos="fade-up">
-                <h2 class="display-1 txt-fx slide-up">Projects</h2>
+                <h2 class="display-1 txt-fx slide-up" style="font-weight: bolder;">Projects</h2>
                 <p>Some of my recent works</p>
               </div>
               <div class="row">
@@ -150,7 +152,7 @@
                   <!-- Project 1 -->
                   <div class="project-frame mb-4" data-aos="fade-right">
                     <a href="project1.html" class="project-link">
-                      <img src="images/FUTURA.png" alt="Project 1" class="img-fluid">
+                      <img src="images/face2.png" alt="Project 1" class="img-fluid">
                       <div class="project-info">
                         <h3>Nexus - Face Recognition Surveillance</h3>
                         <p>Developed using python's flask framework utilizing advance computer vision methods aimed for improved security.</p>
@@ -189,7 +191,7 @@
               <div class="row justify-content-center mb-5">
                 <div class="col-lg-6" data-aos="fade-up">
                   <span class="text-muted text-uppercase">Personal Info</span>
-                  <h2 class="display-1 txt-fx slide-up">Contact Me</h2>
+                  <h2 class="display-1 txt-fx slide-up" style="font-weight: bolder;">Contact Me</h2>
                 </div>
               </div>
               <div class="row d-flex g-5">
@@ -288,21 +290,20 @@
     return Math.random() * (max - min) + min
   }
 
+  // Blob movement and animation
   class Blob {
     constructor(el) {
-      this.el = el
-      const boundingRect = this.el.getBoundingClientRect()
-      this.size = boundingRect.width
-      this.initialX = randomNumber(0, window.innerWidth - this.size)
-      this.initialY = randomNumber(0, window.innerHeight - this.size)
-      this.el.style.top = `${this.initialY}px`
-      this.el.style.left = `${this.initialX}px`
-      this.vx =
-        randomNumber(MIN_SPEED, MAX_SPEED) * (Math.random() > 0.5 ? 1 : -1)
-      this.vy =
-        randomNumber(MIN_SPEED, MAX_SPEED) * (Math.random() > 0.5 ? 1 : -1)
-      this.x = this.initialX
-      this.y = this.initialY
+      this.el = el;
+      const boundingRect = this.el.getBoundingClientRect();
+      this.size = boundingRect.width;
+      this.initialX = randomNumber(0, window.innerWidth - this.size);
+      this.initialY = randomNumber(0, window.innerHeight - this.size);
+      this.el.style.top = `${this.initialY}px`;
+      this.el.style.left = `${this.initialX}px`;
+      this.vx = randomNumber(MIN_SPEED, MAX_SPEED) * (Math.random() > 0.5 ? 1 : -1);
+      this.vy = randomNumber(MIN_SPEED, MAX_SPEED) * (Math.random() > 0.5 ? 1 : -1);
+      this.x = this.initialX;
+      this.y = this.initialY;
     }
 
     update() {
@@ -396,7 +397,7 @@ function topFunction() {
   </script>
 </body>
 <footer class="text-center py-4">
-  <p>GitHub: <a href="https://github.com/yourusername" title="Eshwin's GitHub">Eshwin</a></p>
-  <p>&copy; 2024 @Eshwin (Developed For Educational Purposes)</p>
+  <p>GitHub: <a href="https://github.com/ESHWIN55" title="Eshwin's GitHub">Eshwin</a></p>
+  <p>&copy; 2024 @Eshwin <br> (Developed For Educational Purposes Only)</p>
 </footer>
 </html>

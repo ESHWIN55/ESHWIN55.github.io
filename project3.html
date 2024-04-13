@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ES Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Sole Fusion - Magazine</title>
+  <meta name="description" content="Showcase of Sole Fusion Magazine, a highlight of Eshwin Singh's graphic design projects focusing on sneaker culture, designed with Adobe tools." />
+  <meta name="keywords" content="Sole Fusion, magazine, graphic design, Adobe Photoshop, Adobe InDesign, sneaker culture" />
+  <meta name="robots" content="index, follow" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <!-- Including Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
   <style>
     .container {
       margin-top: 20px;
@@ -24,15 +28,6 @@
     .back-button a {
       background-color: #333;
       color: white;
-    }
-    .card {
-      background: rgba(255, 255, 255, 0); /* Semi-transparent white */
-      backdrop-filter: blur(10px); /* Apply a blur effect */
-      padding: 40px; /* Increased padding */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 20px;
-      margin-bottom: 20px; /* Add bottom margin */
-      border: 5px solid rgba(255, 255, 255, 0.18); /* Optional: Add a subtle border */
     }
     p {
       text-align: justify;
@@ -94,6 +89,7 @@
   <div class="bouncing-blobs-container">
     <div class="bouncing-blobs-glass"></div>
     <div class="bouncing-blobs">
+      <!-- Individual bouncing blobs with unique color classes for styling -->
       <div class="bouncing-blob bouncing-blob--blue"></div>
       <div class="bouncing-blob bouncing-blob--blue"></div>
       <div class="bouncing-blob bouncing-blob--blue"></div>
@@ -112,13 +108,13 @@
     <div class="card">
       <div class="row">
         <div class="col-md-6">
-          <h2>Sole Fusion - Magazine</h2>
+          <h2 style="font-weight: bolder; margin-bottom: 40px;">Sole Fusion - Magazine</h2>
           <p>This magazine represents a vibrant exploration of sneaker culture, designed with a blend of Adobe InDesign and Photoshop to vividly bring its pages to life. It offers a unique opportunity to display an array of creative views and skills, meticulously weaving together the latest trends in footwear with their profound global impact. From delving into the rich history of sneakers to examining their significant cultural footprint in street fashion, the publication provides a comprehensive look at how these iconic items have shaped and been shaped by celebrities, sports, and broader societal shifts. Each page is crafted not just to inform, but to visually captivate, showcasing the dynamic interplay between design and content that mirrors the very essence of sneaker culture itself.</p>
           <h3 style="margin-top: 40px; margin-bottom: 30px;">Development Tools</h3>
           <ul>
-            <li><img src="images/adobe.svg" alt="Adobe Photoshop" class="svg-icon"> Adobe Photoshop</li>
-            <li><img src="images/adobe (1).svg" alt="Adobe Illustrator" class="svg-icon"> Adobe Illustrator</li>
-            <li><img src="images/adobe (4).svg" alt="Adobe InDesign" class="svg-icon"> Adobe InDesign</li>
+            <li><img src="images/adobe.svg" alt="Adobe Photoshop icon" class="svg-icon"> Adobe Photoshop</li>
+            <li><img src="images/adobe (1).svg" alt="Adobe Illustrator icon" class="svg-icon"> Adobe Illustrator</li>
+            <li><img src="images/adobe (4).svg" alt="Adobe InDesign icon" class="svg-icon"> Adobe InDesign</li>
           </ul>
           <button class="pdf-btn"><i class="fas fa-file-pdf"></i> Online PDF coming soon</button>
         </div>
@@ -127,10 +123,10 @@
           <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="images/mag1.png" class="d-block w-100" alt="...">
+                <img src="images/mag1.png" class="d-block w-100" alt="Sole Fusion Magazine Cover">
               </div>
               <div class="carousel-item">
-                <img src="images/mag2.png" class="d-block w-100" alt="...">
+                <img src="images/mag2.png" class="d-block w-100" alt="Sole Fusion Magazine Spread">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
@@ -148,119 +144,117 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
   <script>
-  const MIN_SPEED = 2
-  const MAX_SPEED = 2.5
-
-  function randomNumber(min, max) {
-    return Math.random() * (max - min) + min
-  }
-
-  class Blob {
-    constructor(el) {
-      this.el = el
-      const boundingRect = this.el.getBoundingClientRect()
-      this.size = boundingRect.width
-      this.initialX = randomNumber(0, window.innerWidth - this.size)
-      this.initialY = randomNumber(0, window.innerHeight - this.size)
-      this.el.style.top = `${this.initialY}px`
-      this.el.style.left = `${this.initialX}px`
-      this.vx =
-        randomNumber(MIN_SPEED, MAX_SPEED) * (Math.random() > 0.5 ? 1 : -1)
-      this.vy =
-        randomNumber(MIN_SPEED, MAX_SPEED) * (Math.random() > 0.5 ? 1 : -1)
-      this.x = this.initialX
-      this.y = this.initialY
-    }
-
-    update() {
-      this.x += this.vx
-      this.y += this.vy
-      if (this.x >= window.innerWidth - this.size) {
-        this.x = window.innerWidth - this.size
-        this.vx *= -1
-      }
-      if (this.y >= window.innerHeight - this.size) {
-        this.y = window.innerHeight - this.size
-        this.vy *= -1
-      }
-      if (this.x <= 0) {
-        this.x = 0
-        this.vx *= -1
-      }
-      if (this.y <= 0) {
-        this.y = 0
-        this.vy *= -1
-      }
-    }
-
-    move() {
-      this.el.style.transform = `translate(${this.x - this.initialX}px, ${
-        this.y - this.initialY
-      }px)`
-    }
-  }
-
-  function initBlobs() {
-    const blobEls = document.querySelectorAll('.bouncing-blob')
-    const blobs = Array.from(blobEls).map((blobEl) => new Blob(blobEl))
-
-    function update() {
-      requestAnimationFrame(update)
-      blobs.forEach((blob) => {
-        blob.update()
-        blob.move()
-      })
-    }
-
-    requestAnimationFrame(update)
-  }
-
-  initBlobs()
-
-  </script>
-  <script>
-    (function ($) {
-      "use strict";
-
-      // Animate Texts
-      function initTextFx() {
-        $('.txt-fx').each(function () {
-          let words = this.textContent.split(/\s+/);
-          let newHtml = words.map(word => {
-            let letters = [...word].map((letter, i) => `<span class='letter' style='transition-delay:${100 + i * 10}ms;'>${letter}</span>`).join('');
-            return `<span class="word">${letters}</span>`;
-          }).join("<span class='letter' style='transition-delay:100ms;'>&nbsp;</span>");
-          
-          this.innerHTML = newHtml;
-        });
-      }
-
-      // Document Ready
-      $(function () {
-        initTextFx();
-        AOS.init({ duration: 1200 });
-      });
-
-    })(jQuery);
-  </script>
+    const MIN_SPEED = 2
+    const MAX_SPEED = 2.5
   
-  <script>
-    window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("backToTopButton").style.display = "block";
-  } else {
-    document.getElementById("backToTopButton").style.display = "none";
+    function randomNumber(min, max) {
+      return Math.random() * (max - min) + min
+    }
+  
+    class Blob {
+      constructor(el) {
+        this.el = el;
+        const boundingRect = this.el.getBoundingClientRect();
+        this.size = boundingRect.width;
+        this.initialX = randomNumber(0, window.innerWidth - this.size);
+        this.initialY = randomNumber(0, window.innerHeight - this.size);
+        this.el.style.top = `${this.initialY}px`;
+        this.el.style.left = `${this.initialX}px`;
+        this.vx = randomNumber(MIN_SPEED, MAX_SPEED) * (Math.random() > 0.5 ? 1 : -1);
+        this.vy = randomNumber(MIN_SPEED, MAX_SPEED) * (Math.random() > 0.5 ? 1 : -1);
+        this.x = this.initialX;
+        this.y = this.initialY;
+      }
+  
+      update() {
+        this.x += this.vx
+        this.y += this.vy
+        if (this.x >= window.innerWidth - this.size) {
+          this.x = window.innerWidth - this.size
+          this.vx *= -1
+        }
+        if (this.y >= window.innerHeight - this.size) {
+          this.y = window.innerHeight - this.size
+          this.vy *= -1
+        }
+        if (this.x <= 0) {
+          this.x = 0
+          this.vx *= -1
+        }
+        if (this.y <= 0) {
+          this.y = 0
+          this.vy *= -1
+        }
+      }
+  
+      move() {
+        this.el.style.transform = `translate(${this.x - this.initialX}px, ${
+          this.y - this.initialY
+        }px)`
+      }
+    }
+  
+    function initBlobs() {
+      const blobEls = document.querySelectorAll('.bouncing-blob')
+      const blobs = Array.from(blobEls).map((blobEl) => new Blob(blobEl))
+  
+      function update() {
+        requestAnimationFrame(update)
+        blobs.forEach((blob) => {
+          blob.update()
+          blob.move()
+        })
+      }
+  
+      requestAnimationFrame(update)
+    }
+  
+    initBlobs()
+  
+    </script>
+    <script>
+      (function ($) {
+        "use strict";
+  
+        // Animate Texts
+        function initTextFx() {
+          $('.txt-fx').each(function () {
+            let words = this.textContent.split(/\s+/);
+            let newHtml = words.map(word => {
+              let letters = [...word].map((letter, i) => `<span class='letter' style='transition-delay:${100 + i * 10}ms;'>${letter}</span>`).join('');
+              return `<span class="word">${letters}</span>`;
+            }).join("<span class='letter' style='transition-delay:100ms;'>&nbsp;</span>");
+            
+            this.innerHTML = newHtml;
+          });
+        }
+  
+        // Document Ready
+        $(function () {
+          initTextFx();
+          AOS.init({ duration: 1200 });
+        });
+  
+      })(jQuery);
+    </script>
+    
+    <script>
+      window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("backToTopButton").style.display = "block";
+    } else {
+      document.getElementById("backToTopButton").style.display = "none";
+    }
   }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
-}
-  </script>
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+  }
+    </script>
+</body>
 </html>
