@@ -20,8 +20,11 @@
       margin-top: 20px;
     }
     .carousel-inner img {
+      margin-top: 50px;
       width: 100%;
-      height: 300px;
+      height: auto; /* Adjust height automatically */
+      max-height: 60vh; /* Prevent images from being too tall on small screens */
+      object-fit: cover; /* Cover the area without losing aspect ratio */
       border: 2px;
       padding: 10px;
       border-radius: 20px;
@@ -78,12 +81,6 @@
     margin-right: 8px; /* Space between the icon and the text */
   }
 
-  .carousel-inner img {
-    width: 100%;
-    height: auto; /* Adjust height automatically */
-    max-height: 60vh; /* Prevent images from being too tall on small screens */
-    object-fit: cover; /* Cover the area without losing aspect ratio */
-  }
   </style>
 </head>
 <!-- Google tag (gtag.js) -->
@@ -119,7 +116,7 @@
     <div class="card">
       <div class="row">
         <div class="col-md-6">
-          <h1 style="font-weight: bolder; margin-bottom: 40px;">Nexus - Face Recognition Surveillance</h1>
+          <h1 style="font-size:x-large; margin-bottom: 40px;">Nexus - Face Recognition Surveillance</h1>
           <p>This project harnesses the robust Flask framework, a Python-based micro web framework, to develop a highly sophisticated face recognition application focused on advanced computer vision and biometric identification techniques. Its core mission is to bolster security frameworks by leveraging facial recognition technology to accurately identify and track individuals in real-time across various video feeds. Incorporating cutting-edge algorithms for object detection and tracking, coupled with advanced machine learning models dedicated to facial recognition, the system excels at processing and analyzing facial features in complex visual data with high efficiency. This innovative approach ensures a powerful and adaptable face recognition security solution, optimized for diverse environments and capable of delivering unparalleled accuracy in real-time monitoring and threat detection. Flask's flexibility not only facilitates rapid application development and deployment but also aids in crafting a user-friendly interface, making sophisticated face recognition technology accessible and manageable.</p>
         </div>
         <div class="col-md-6">
